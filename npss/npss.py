@@ -37,9 +37,10 @@ def argv_pars(arguments: List[str]) -> int:
             r.append(int(i))
         except Exception:
             pass
-    
+
     r = [x for x in r if x > 0]
     return max(r) if r else 30
+
 
 if __name__ == "__main__":
     print(npss(argv_pars(argv)))
