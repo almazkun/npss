@@ -26,12 +26,12 @@ jobs:
 
       - name: Make the coverage badge
         run: |
-          python3 ./github/badge.py
+          python3 .github/badge.py
 
       - name: Update the badge
         run: |
           git config --global user.email "hello@akun.dev"
           git config --global user.name "Almaz Kunpeissov"
-          git add -f ./.github/coverage.svg
+          git add -f .github/coverage.svg
           git commit -m "update the badge"
           git push
