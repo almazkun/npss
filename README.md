@@ -1,3 +1,5 @@
+![coverage](.github/coverage.svg)
+
 # npss
 Your New Password!
 
