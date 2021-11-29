@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "npss"
+version = "0.1.0"
+description = "Your New Password!"
+authors = ["Almaz Kunpeissov <hello@akun.dev>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/almazkun/npss"
+repository = "https://github.com/almazkun/npss"
+documentation = "https://github.com/almazkun/npss"
+include = [
+    "LICENSE",
+]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Security",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+npss = 'npss:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
