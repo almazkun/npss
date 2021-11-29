@@ -1,0 +1,37 @@
+on:
+  push:
+    branches:
+    - '!main'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install coverage pytest anybadge
+
+      - name: Test with pytest
+        run: |
+          coverage run --omit '*/virtualenvs/*' -m pytest 
+
+      - name: Make the coverage badge
+        run: |
+          python3 ./github/badge.py
+
+      - name: Update the badge
+        run: |
+          git config --global user.email "hello@akun.dev"
+          git config --global user.name "Almaz Kunpeissov"
+          git add -f ./.github/coverage.svg
+          git commit -m "update the badge"
+          git push
