@@ -34,4 +34,4 @@ jobs:
           git config --global user.name "Almaz Kunpeissov"
           git add -f .github/coverage.svg
           git commit -m "update the badge"
-          git push
+          (git push) || true
