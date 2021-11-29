@@ -13,7 +13,7 @@ include = [
 ]
 classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Software Development :: Security",
+    "Operating System :: OS Independent",
 ]
 
 [tool.poetry.dependencies]
