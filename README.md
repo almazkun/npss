@@ -1,4 +1,4 @@
-![coverage](raw.githubusercontent.com/almazkun/npss/main/.github/coverage.svg)
+![coverage](https://raw.githubusercontent.com/almazkun/npss/main/.github/coverage.svg)
 
 # npss
 Your New Password!
