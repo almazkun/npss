@@ -4,17 +4,14 @@ from typing import List
 
 
 def npss(length: int) -> str:
-    """Generates random password of the given length with at least one "-".
+    """Generates random string of the given length with at least one "-".
 
     Args:
-        length (int, optional): Password length.
+        length (int): Desired length.
 
     Returns:
-        str: Your new random password
+        str: Your new shiny random password.
     """
-    if not length:
-        length = 30
-
     while True:
         pss = token_urlsafe(length)[:length]
         if "-" in pss:
@@ -22,7 +19,7 @@ def npss(length: int) -> str:
 
 
 def argv_pars(arguments: List[str]) -> int:
-    """Parses argv, bigest int in arguments or 1
+    """Returns second argv or 30.
 
     Args:
         argv (List[str]): sys.argv
@@ -30,17 +27,15 @@ def argv_pars(arguments: List[str]) -> int:
     Returns:
         int: i >= 1, or 30
     """
+    try:
+        return max(int(arguments[1]), 1)
+    except Exception:
+        return 30
 
-    r = []
-    for i in arguments:
-        try:
-            r.append(int(i))
-        except Exception:
-            pass
 
-    r = [x for x in r if x > 0]
-    return max(r) if r else 30
+def main():
+    return npss(argv_pars(argv))
 
 
 if __name__ == "__main__":
-    print(npss(argv_pars(argv)))
+    print(main())

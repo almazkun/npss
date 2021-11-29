@@ -1,1 +1,1 @@
-from npss.npss import npss, argv_pars
+from npss.npss import npss, argv_pars, main
