@@ -16,7 +16,7 @@ def make_cov_badge() -> None:
     badge = anybadge.Badge(
         label="coverage", value=total, thresholds=thresholds, value_suffix="%"
     )
-    badge.write_badge("coverage.svg", overwrite=True)
+    badge.write_badge(".github/coverage.svg", overwrite=True)
 
 
 if __name__ == "__main__":
