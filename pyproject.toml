@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "npss"
-version = "0.3.0"
+version = "1.0.0"
 description = "Your New Password!"
 authors = ["Almaz Kunpeissov <hello@akun.dev>"]
 readme = "README.md"
